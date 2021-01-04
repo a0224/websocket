@@ -44,6 +44,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     //implementation project(path: ':websocket')
-    implementation 'com.github.whdroid:websocket:1.0'
+   // implementation 'com.github.whdroid:websocket:1.1'
 
 }

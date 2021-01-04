@@ -5,7 +5,7 @@ buildscript {
         google()
         jcenter()
         //配置仓库地址
-      //  maven { url "https://jitpack.io" }
+        maven { url "https://jitpack.io" }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.0"
