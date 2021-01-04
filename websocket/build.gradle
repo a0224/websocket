@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.bao8.websocket'
+group='com.weh.websocket'
 
 android {
     compileSdkVersion 28
