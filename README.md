@@ -1,4 +1,4 @@
-依赖
+    android封装websocket
     
 
     api 'org.java-websocket:Java-WebSocket:1.4.0'
