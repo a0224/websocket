@@ -192,6 +192,10 @@ public class WebSocketWrapper {
         return connectStatus;
     }
 
+    public WebSocketClient getWebSocket() {
+        return mWebSocket;
+    }
+
     /**
      * 彻底销毁资源
      */
