@@ -67,6 +67,10 @@ public class WebSocketManager {
         start();
     }
 
+    public WebSocketWrapper getWebSocketWrapper() {
+        return mWebSocket;
+    }
+
     /**
      * 启动，调用此方法开始连接
      */
