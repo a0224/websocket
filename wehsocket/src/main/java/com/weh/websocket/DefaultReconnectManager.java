@@ -102,14 +102,20 @@ public class DefaultReconnectManager implements ReconnectManager {
 
                                 }
 
+                                if (destroyed) {
+                                    reconnecting = false;
+                                    LogUtil.i(TAG, "reconnectOnce destroyed :" + destroyed);
+                                    return;
+                                }
+                                if (needStopReconnect) {
+                                    reconnecting = false;
+                                    LogUtil.i(TAG, "reconnectOnce needStopReconnect :" + needStopReconnect);
+                                    return;
+                                }
                                 if (connected) {
                                     LogUtil.i(TAG, "reconnectOnce success!");
                                     mOnDisconnectListener.onConnected();
                                     return;
-                                }
-                                if (needStopReconnect) {
-                                    LogUtil.i(TAG, "reconnectOnce needStopReconnect :" + needStopReconnect);
-                                    break;
                                 }
                             } catch (InterruptedException e) {
                                 break;
