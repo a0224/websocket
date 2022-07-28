@@ -1,26 +1,26 @@
 package com.weh.websocket.request;
 
-import com.weh.websocket.bean.SocketMessage;
+import com.weh.websocket.bean.WebSocketMessage;
 
 import org.java_websocket.client.WebSocketClient;
 
 /**
  * byte[] 类型的请求
  */
-public class MessageRequest implements Request<SocketMessage> {
+public class MessageRequest implements Request<WebSocketMessage> {
 
     MessageRequest() {
     }
 
-    private SocketMessage data;
+    private WebSocketMessage data;
 
     @Override
-    public void setRequestData(SocketMessage data) {
+    public void setRequestData(WebSocketMessage data) {
         this.data = data;
     }
 
     @Override
-    public SocketMessage getRequestData() {
+    public WebSocketMessage getRequestData() {
         return this.data;
     }
 
