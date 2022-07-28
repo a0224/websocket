@@ -1,26 +1,26 @@
 package com.weh.websocket.request;
 
-import com.weh.websocket.bean.Bao8Message;
+import com.weh.websocket.bean.SocketMessage;
 
 import org.java_websocket.client.WebSocketClient;
 
 /**
  * byte[] 类型的请求
  */
-public class MessageRequest implements Request<Bao8Message> {
+public class MessageRequest implements Request<SocketMessage> {
 
     MessageRequest() {
     }
 
-    private Bao8Message data;
+    private SocketMessage data;
 
     @Override
-    public void setRequestData(Bao8Message data) {
+    public void setRequestData(SocketMessage data) {
         this.data = data;
     }
 
     @Override
-    public Bao8Message getRequestData() {
+    public SocketMessage getRequestData() {
         return this.data;
     }
 

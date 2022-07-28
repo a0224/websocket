@@ -2,7 +2,7 @@ package com.weh.websocket;
 
 import android.text.TextUtils;
 
-import com.weh.websocket.bean.Bao8Message;
+import com.weh.websocket.bean.SocketMessage;
 import com.weh.websocket.dispatcher.MainThreadResponseDelivery;
 import com.weh.websocket.dispatcher.ResponseDelivery;
 import com.weh.websocket.dispatcher.ResponseProcessEngine;
@@ -170,8 +170,8 @@ public class WebSocketManager {
         sendRequest(request);
     }
 
-    public void send(Bao8Message message) {
-        Request<Bao8Message> request = RequestFactory.createMessageRequest();
+    public void send(SocketMessage message) {
+        Request<SocketMessage> request = RequestFactory.createMessageRequest();
         request.setRequestData(message);
         sendRequest(request);
     }

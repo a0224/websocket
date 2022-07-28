@@ -1,6 +1,6 @@
 package com.weh.websocket.request;
 
-import com.weh.websocket.bean.Bao8Message;
+import com.weh.websocket.bean.SocketMessage;
 
 import org.java_websocket.framing.Framedata;
 import org.java_websocket.framing.PingFrame;
@@ -26,8 +26,8 @@ public class RequestFactory {
     private static Queue<FrameDataRequest> FRAME_DATA_REQUEST_POOL = new ArrayDeque<>(POLL_SIZE);
     private static Queue<CollectionFrameDataRequest> COLLECTION_FRAME_REQUEST_POOL = new ArrayDeque<>(POLL_SIZE);
 
-    public static Request<Bao8Message> createMessageRequest() {
-        Request<Bao8Message> request = MESSAGE_REQUEST_POOL.poll();
+    public static Request<SocketMessage> createMessageRequest() {
+        Request<SocketMessage> request = MESSAGE_REQUEST_POOL.poll();
         if (request == null) {
             request = new MessageRequest();
         }
